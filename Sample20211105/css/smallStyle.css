@@ -1,0 +1,157 @@
+/*スマートフォン用CSS*/
+
+html {
+    /* ベースのフォントサイズを16*62.5の10pxとする */
+    font-size: 62.5%;
+}
+/*説明*/
+#description{
+    font-size: 2rem;
+    margin: 0 2rem 2rem 2rem;
+}
+details{
+    font-size: 5rem;
+    color: red;
+    cursor: pointer;
+}
+details[open] {
+    background: #dedede;
+}
+/*パラメータチェックデバッグ用*/
+.checkMsg{
+    font-size: 2.5rem;
+}
+
+.small_heart_off{
+    margin: 0 auto;
+    background: url("../img/fav_heart.png") no-repeat;
+    background-size: 180% auto;
+    min-width: 60px;
+    width: 20%;
+    height: 15%;
+    /*border: 1px solid crimson; !* 確認用* /*/
+    background-position:left top;
+}
+.small_heart_on{
+    margin: 0 auto;
+    background: url("../img/fav_heart.png") no-repeat;
+    background-size: 180% auto;
+    min-width: 60px;
+    width: 20%;
+    height: 15%;
+    /*border: 1px solid crimson; !* 確認用* /*/
+    background-position:right top;
+}
+
+/*モーダルウインドウのお気に入りマーク*/
+.modal_heart_off{
+    margin: 0 auto;
+    background: url("../img/fav_heart.png") no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid green;*/
+    background-position:left top;
+}
+.modal_heart_on{
+    margin: 0 auto;
+    background: url("../img/fav_heart.png") no-repeat;
+    /*background-size: 90px auto;*/
+    /*object-fit: cover;*/
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    /*星の確認用*/
+    /*border: 1px solid crimson;*/
+    background-position:right top;
+}
+
+.items_img {
+    width: auto;
+    height: 20%;
+    min-height: 200px;
+    position: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    alignment: center;
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin:0;
+    padding:0;
+}
+.item {
+    /*border: blue;*/
+    width: calc(100% / 2 - 40px);
+    height: auto;
+    /*max-height: 500px;*/
+    max-height: 100rem; /* rootHTMLfontが10pxなので10px*10 */
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 3.5rem;
+    /*font-max-size: 8rem;*/
+}
+
+/*モーダルウインドウ用*/
+#modal{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*border: solid 2px blue;*/
+    background:#fff;
+    /*width:300px;*/
+    align-content: center;
+    width:80vw;
+    height: 85vh;
+    max-height: 2500px;
+    max-width: 80vh;
+    min-height: 500px;
+    min-width: 100px;
+    padding:20px;
+    border-radius:4px;
+
+    position: fixed;
+    /*inset: 0;*/
+    margin:0 auto;
+    transition:transform 0.2s;
+    z-index:2;
+    font-size: 2vh;
+    font-max-size: 100px;
+}
+
+#modal > p{
+    margin:0 0 20px;
+}
+
+#mask.hidden{
+    display:none;
+}
+
+#modal.hidden{
+    transform:translate(0,-1000rem);
+}
+
+#img_detail{
+    border: 1px solid green;
+    max-height: 50vmin;
+    width: auto;
+    height: 80%;
+}
+
+#parent {
+    position: relative;
+    width: 100%;
+}
+
+#parent:before {
+    content: "";
+    display: block;
+    padding-top: 75%;
+}

@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*body{*/
+/*    font-size: 14px;*/
+/*}*/
+
+#open,#close{
+    cursor:pointer;
+    width:200px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    text-align: center;
+    padding:12px 0;
+    margin:16px auto 0;
+}
+
+#mask{
+    background:rgba(0,0,0,0.4);
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:1;
+}
+
+#modal{
+
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: solid 2px blue;
+
+    background:#fff;
+    /*width:300px;*/
+    align-content: center;
+    width:80vw;
+    height: 90vh;
+    max-height: 2500px;
+    max-width: 80vh;
+    min-height: 500px;
+    min-width: 100px;
+    padding:20px;
+    border-radius:4px;
+
+    position: fixed;
+    inset: 0;
+    margin:0 auto;
+
+    /*left:0;*/
+    /*right:0;*/
+    transition:transform 0.2s;
+    z-index:2;
+
+    /*モーダル中画像表示*/
+    /*background-size: 100% auto;*/
+    /*background-position:center center;*/
+
+    font-size: 2vh;
+    font-max-size: 100px;
+
+
+}
+
+#modal > p{
+    margin:0 0 20px;
+}
+
+#mask.hidden{
+    display:none;
+}
+
+#modal.hidden{
+    transform:translate(0,-1000rem);
+    /*position: sticky;*/
+}
+
+#img_detail{
+    /*position: relative;*/
+    /*!*background-size: 100% auto;*!*/
+    /*min-width: 6px;*/
+    /*width: auto;*/
+    /*!*width: 200%;*!*/
+    /*height: 50%;*/
+    /*border: 1px solid crimson; !* 確認用* /*/
+    background-position:center center;
+
+
+    /*margin: 0;*/
+    /*width: auto;*/
+    /*!*height: 50vh;*!*/
+    /*height: 500px;*/
+}
+/*#img_detail img{*/
+/*    border: 1px solid blue; !* 確認用* /*/
+/*    !*object-fit: contain;*!*/
+/*    position: relative;*/
+/*    min-width: 100px;*/
+/*    width: auto;*/
+/*    height: 80rem;*/
+
+/*    max-width: 10px;*/
+/*    margin: 0;*/
+/*    !*z-index:2;*!*/
+/*}*/
+
+#small_img{
+    border: 1px solid green; /* 確認用*/
+    min-width: 20px;
+    min-height: 20px;
+    max-height: 50vmin;
+    width: auto;
+    height: 80%;
+}
+
+#parent {
+    position: relative;
+    width: 100%;
+}
+
+#parent:before {
+    content: "";
+    display: block;
+    padding-top: 75%;
+}
+
+#modal_heart{
+    content: "";
+
+}
